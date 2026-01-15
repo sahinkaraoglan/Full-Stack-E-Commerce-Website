@@ -1,6 +1,6 @@
 "use client"
 import {RxAvatar} from 'react-icons/rx'
-import Avatar from "../general/Avatar"
+import Avatar from '../general/Avatar'
 import { Rating } from '@mui/material'
 
 const Comment = ({prd}: {prd : any}) => {

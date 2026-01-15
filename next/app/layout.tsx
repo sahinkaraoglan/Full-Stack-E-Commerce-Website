@@ -3,6 +3,8 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from './components/navbar/Navbar'
 import Footer from './components/footer/Footer'
+import CartProvider from '@/provider/CartProvider'
+import { Toaster } from 'react-hot-toast'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,13 +21,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className='flex flex-col min-h-screen'>
+        <Toaster
+            position="top-right"
+            reverseOrder={false}
+        />
+        <CartProvider>
+          <div className='flex flex-col min-h-screen'>
           <Navbar/>
           <main className='flex-grow'>
             {children}
           </main>
           <Footer/>
         </div>
+        </CartProvider>
+        
       </body>
     </html>
   )
