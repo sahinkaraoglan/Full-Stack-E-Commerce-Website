@@ -1,7 +1,7 @@
 import CardCount from "./CardCount"
 import HamburgerMenu from "./HamburgerMenu"
 import Logo from "./Logo"
-import { Search } from "./Search"
+import Search from "./Search"
 import User from "./User"
 
 const Navbar = () => {
