@@ -10,9 +10,14 @@ import Link from "next/link"
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation"
 import toast from "react-hot-toast"
+import { User } from "@prisma/client"
+import React, { useEffect } from "react"
 
+interface LoginClientProps{
+    currentUser: User | null | undefined
+}
 
-const LoginClient = () => {
+const LoginClient:React.FC<LoginClientProps> = ({currentUser}) => {
     const router = useRouter();
     const {
         register,
@@ -37,6 +42,13 @@ const LoginClient = () => {
             }
         })
       }
+
+      useEffect(() => {
+        if(currentUser){
+            router.push('/cart')
+            router.refresh();
+        }
+      }, [])
 
   return ( 
     <AuthContainer>
