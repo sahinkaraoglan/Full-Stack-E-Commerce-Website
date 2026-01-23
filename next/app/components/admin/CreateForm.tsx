@@ -40,11 +40,11 @@ const CreateForm = () => {
          icon: CiMicrophoneOn
       },
       {
-         name: "Ayakkabı1",
+         name: "Telefon",
          icon: FaComputer
       },
       {
-         name: "Ayakkabı2",
+         name: "Klavye",
          icon: FaComputer
       },
    ]
